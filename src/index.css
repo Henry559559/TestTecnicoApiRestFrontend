@@ -1,0 +1,188 @@
+:root {
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+label {
+  display: block;
+}
+
+.form {
+  width: 400px;
+  margin: 0 auto;
+}
+
+input[type="text"],
+[type="password"] {
+  display: block;
+  padding: 10px;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 5px 0 10px 0;
+}
+
+input[type="button"],
+button {
+  background-color: rgb(39, 131, 212);
+  padding: 10px;
+  border: 0;
+  min-width: 100px;
+  border-radius: 5px;
+  color: white;
+}
+
+nav {
+  background-color: #eee;
+}
+
+nav ul {
+  margin: 0;
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+}
+
+a {
+  color: rgb(97, 28, 161);
+  text-decoration: none;
+}
+
+.dashboard {
+  width: 1000px;
+  margin: auto;
+}
+
+.errorMessage {
+  background-color: #f2dede;
+  color: #a94442;
+  padding: 10px;
+}
+/* Estilos generales para la tabla */
+.table-container {
+  overflow-x: auto; /* Permite desplazamiento horizontal en pantallas pequeñas */
+}
+
+table {
+  width: 100%; /* La tabla ocupa todo el ancho del contenedor */
+  border-collapse: collapse; /* Elimina el espacio entre las celdas */
+  margin: 25px 0; /* Margen arriba y abajo de la tabla */
+  font-size: 0.9em; /* Tamaño de fuente */
+  min-width: 400px; /* Ancho mínimo de la tabla */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); /* Sombra suave alrededor de la tabla */
+}
+
+th,
+td {
+  padding: 12px 15px; /* Espaciado dentro de las celdas */
+  text-align: left; /* Alineación del texto */
+}
+
+th {
+  background-color: #009879; /* Color de fondo para los encabezados */
+  color: #ffffff; /* Color de texto para los encabezados */
+  text-transform: uppercase; /* Texto en mayúsculas para los encabezados */
+}
+
+tr {
+  border-bottom: 1px solid #dddddd; /* Línea de separación entre filas */
+}
+
+tr:nth-of-type(even) {
+  background-color: #f3f3f3; /* Color de fondo para filas pares */
+}
+
+tr:last-of-type {
+  border-bottom: 2px solid #009879; /* Línea más gruesa al final de la tabla */
+}
+
+tr:hover {
+  background-color: #f1f1f1; /* Color de fondo al pasar el ratón por encima de una fila */
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+  table {
+    display: block;
+    overflow-x: auto; /* Permite desplazamiento horizontal */
+  }
+
+  table thead {
+    display: none; /* Oculta los encabezados en dispositivos móviles */
+  }
+
+  table tr {
+    display: block;
+    margin-bottom: .625em;
+  }
+
+  table td {
+    display: block;
+    text-align: right;
+    font-size: .8em;
+    border-bottom: 1px solid #ddd;
+  }
+
+  table td::before {
+    content: attr(data-label); /* Muestra el nombre del encabezado antes de cada celda */
+    float: left;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  table td:last-child {
+    border-bottom: 0;
+  }
+  .modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75); /* Oscurece más el fondo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000; /* Asegura que el modal esté sobre otros elementos */
+  }
+  
+  .modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px; /* Bordes más redondeados */
+    position: relative;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave para resaltar el modal */
+    width: 50%; /* Ancho del modal */
+    max-width: 500px; /* Máximo ancho del modal */
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #555; /* Color del botón más suave */
+  }
+  
+  /* Estilo adicional para mejorar la accesibilidad del botón de cierre */
+  .close-button:focus {
+    outline: none;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+  }
+  .card-text {
+    margin-bottom: 100px; /* Ajusta este valor para reducir el espacio */
+  }
+
+  
+}
